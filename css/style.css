@@ -1,0 +1,523 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.eot');
+    src: url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+        url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+sup {
+    font-size: 0.6em;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.block {
+    display: inline-block;
+    margin: 0 14px;
+    width: 219px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.block_wrapper {
+    margin: 0 -14px;
+    font-size: 0;
+}
+
+header {
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.main_menu {
+    padding: 23px 0 19px;
+    background-color: #1f1f56;
+}
+
+.main_menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.main_menu li {
+    display: inline-block;
+}
+
+.main_menu a {
+    color: #b1b1d2;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.social_menu {
+    float: right;
+}
+
+.social_menu a {
+    display: block;
+    background-image: url(../img/sp_sprite.png);
+}
+
+a.fb {
+    height: 19px;
+    width: 10px;
+    background-position: 0 0;
+}
+
+a.tw {
+    height: 15px;
+    width: 18px;
+    background-position: -12px 0;
+}
+
+a.inst {
+    height: 19px;
+    width: 19px;
+    background-position: -32px 0;
+}
+
+a.fb:hover {
+    background-position: 0 -20px;
+}
+
+a.tw:hover {
+    background-position: -12px -20px;
+}
+
+a.inst:hover {
+    background-position: -32px -20px;
+}
+
+.block_wrapper {
+    margin: 0 -14px;
+}
+
+.top_menu {
+    float: left;
+}
+
+.top_menu a {
+    margin-right: 23px;
+}
+
+.top_menu a:hover {
+    color: #fd8300;
+}
+
+.social_menu {
+    float: right;
+}
+
+.social_menu a {
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.contacts {
+    padding: 30px 0;
+}
+
+.telephones p:first-child,
+.social_netvork p:first-child {
+    margin-bottom: 8px;
+}
+
+.telephones a {
+    color: #25252c;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.telephones a:hover {
+    text-decoration: underline;
+}
+
+.tel,
+.mail,
+.skype {
+    position: relative;
+}
+
+.tel::before,
+.mail::before,
+.skype::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 2px;
+    background-image: url(../img/sp_sprite.png);
+}
+
+.tel::before {
+    height: 17px;
+    width: 16px;
+    background-position: -72px -20px;
+}
+
+.mail::before {
+    height: 13px;
+    width: 17px;
+    background-position: -53px -20px;
+}
+
+.skype::before {
+    height: 19px;
+    width: 18px;
+    background-position: -53px 0;
+}
+
+.stick {
+    position: relative; 
+}
+
+.stick::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 3px;
+    width: 1px;
+    height: 51px;
+    background-color: #e4e4ec;
+}
+
+.social_netvork,
+.telephones {
+    padding-left: 48px;
+}
+
+.social_netvork a {
+    color: #25252c;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.social_netvork a:hover {
+    text-decoration: underline;
+}
+
+.order_a_call {
+    text-align: right;
+}
+
+.order_a_call a {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #25252c;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #fd8300;
+}
+
+.order_a_call a:hover {
+    color: #fff;
+    background-color: #fd8300;
+}
+
+.on_photo {
+    padding: 60px 0 45px;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    background: #100808 url(../img/main_photo.jpg);
+    background-size: cover;
+}
+
+.on_photo_title {
+    color: #fff;
+    font: 700 30px "Roboto Slab";
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.on_photo_text {
+    color: #fff;
+    font: normal 14px "Arial";
+    line-height: 24px;
+}
+
+.on_photo_text:hover,
+.on_photo_title:hover {
+    color: #fd8300;
+}
+
+.on_photo_price {
+    color: #fd8300;
+    font: bold  24px "Arial";
+}
+
+.on_photo_price span {
+    font-size: 40px;
+}
+
+.on_photo_price:hover {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    color: #fff;
+    font-family: "Roboto Slab";
+    text-align: left;
+    background-color: #1f1f56;
+}
+
+table th:first-child {
+    border-radius: 3px 0 0 0;
+}
+
+table tr:last-child td:first-child {
+    border-radius: 0 0 0 3px;
+}
+
+table th:last-child {
+    border-radius: 0 3px 0 0;
+}
+
+table tr:last-child td:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+table th:last-child,
+table td:last-child {
+    text-align: right;
+}
+
+table td {
+    color: #666;
+    border-top: 1px solid #cdcddd;
+    background-color: #e4e4ec;
+}
+
+table th,
+table td {
+    padding: 15px 20px;
+}
+
+section a {
+    color: #fd8300;
+    font-weight: bold;
+}
+
+.main_bloc {
+    padding: 40px 0 30px;
+}
+
+main {
+    float: left;
+    max-width: 713px;
+}
+
+.block_width {
+    max-width: 100%;
+}
+
+.content {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e4e4ec;
+}
+
+.content h1 {
+    margin-bottom: 30px;
+    color: #24242b;
+    font-size: 700 30px "Roboto Slab";
+}
+
+.content p {
+    margin: 5px 0;
+}
+
+.content a {
+    color: #fd8300;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content a:hover {
+    color: #24242b;
+}
+
+.cards {
+    padding-top: 30px;
+}
+
+section p {
+    color: #666;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.cards h2 {
+    margin-bottom: 25px;
+    color: #24242b;
+    font: 700 24px "Roboto Slab";
+}
+
+.figure h3 a {
+    color: #1f1f53;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.figure h3 a:hover {
+    text-decoration: underline;
+}
+
+.figure p {
+    color: #9999a6;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.main_menu_p {
+    padding: 17px 15px 13px;
+    color: #fff;
+    font: 16px "Roboto Slab";
+    border-radius: 3px;
+    background-color: #1f1f56;
+}
+
+aside {
+    float: right;
+}
+
+.aside ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.aside_menu {
+    background-color: #e4e4ec;
+}
+
+.aside_menu>li:not(:first-child) {
+    border-top: 1px solid #cdcddd;
+}
+
+.aside_menu>li>a::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    height: 7px;
+    width: 7px;
+    border-right: 2px solid #656565;
+    border-bottom: 2px solid #656565;
+    transform: rotate(-45deg);
+}
+
+.aside_menu>li:hover>a::after {
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    transform: rotate(45deg);
+}
+
+.aside_menu>li:last-child {
+    border-radius: 3px;
+}
+
+.aside_menu a {
+    position: relative;
+    display: block;
+    padding: 15px;
+    color: #25252c;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.aside_menu>li:hover>a {
+    color: #fff;
+    background-color: #fd8300;
+}
+
+.aside_menu li:hover .sub_menu {
+    display: block;
+}
+
+.sub_menu {
+    display: none;
+}
+
+.sub_menu a {
+    padding-left: 30px;
+    color: #666;
+}
+
+.sub_menu a:hover {
+    background-color: #cecedd;
+}
+
+.footer_menu {
+    padding: 30px 0;
+    background-color: #ededf5;
+}
+
+.footer_menu .block {
+    vertical-align: top;
+}
+
+.bottom_menu {
+    padding: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.bottom_menu li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.bottom_menu a {
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.bottom_menu a:hover {
+    color: #fd8300;
+    text-decoration: underline;
+}
+
+.copyright {
+    padding: 15px;
+    background-color: #dcdce6;
+}
+
+.copyright p {
+    color: #9999a6;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
