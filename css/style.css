@@ -279,6 +279,74 @@ a.inst:hover {
     color: #fff;
 }
 
+main div {
+    display: inline-block;
+}
+
+main h1 {
+    font-size: 24px;
+    color: #24242b;
+    font-family: "Roboto Slab";
+}
+
+main h2 {
+    font-size: 14px;
+    line-height: 24px;
+    color: #24242b;
+    font-family: "Roboto Slab";
+}
+
+.office a:nth-child(2),
+.office a:nth-child(3),
+.office a:last-child {
+    font-size: 18px;
+    line-height: 24px;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: none;
+}
+
+.office a:nth-child(2):hover,
+.office a:nth-child(3):hover,
+.office a:last-child:hover, 
+.advice a:nth-child(2):hover,
+.advice a:last-child:hover {
+    text-decoration: underline;
+}
+
+.place{
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+    font-family: "Arial";
+}
+
+.advice a:nth-child(2),
+.advice a:last-child {
+    font-size: 18px;
+    line-height: 24px;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: none;    
+}
+
+.menenger,
+.bos {
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+    font-family: "Arial";    
+}
+
+.details p {
+    font-size: 14px;
+    line-height: 21px;
+    color: #666666;
+    font-family: "Arial";
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
