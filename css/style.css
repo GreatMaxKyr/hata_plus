@@ -347,6 +347,44 @@ main h2 {
     font-family: "Arial";
 }
 
+.form_map {
+
+}
+
+.form {
+
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+    font-size: 13px;
+    line-height: 21px;
+    color: #9999a6;
+    font-style: italic;
+    font-family: "Arial";
+}
+
+.checkbox {
+    font-size: 13px;
+    line-height: 21px;
+    color: #666666;
+}
+
+.send input {
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid #fd8300;
+    border-radius: 21px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fd8300;
+}
+
+.map {
+    
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
