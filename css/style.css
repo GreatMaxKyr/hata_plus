@@ -16,6 +16,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    cursor: url(../cursor_house.cur), auto;
 }
 
 sup {
@@ -287,6 +288,12 @@ main div {
     max-width: 100%;
 }
 
+.contacts_main h1 {
+    margin: 0 0 30px 0 ;
+    font-size: 24px;
+    color: #24242b;
+    font-family: "Roboto Slab";
+}
 
 .contacts_block {
     display: flex;
@@ -295,9 +302,11 @@ main div {
     border-bottom: 1px solid #e4e4ec;
 }
 
-.contacts_block div {
-    margin: 0 80px;
+.fifty_p {
+    width: 50%;
 }
+
+.contacts_block div {}
 
 .contacts_block > div {
     margin-bottom: 35px;
@@ -317,9 +326,7 @@ main div {
     font-family: "Roboto Slab";
 }
 
-.office a:nth-child(2),
-.office a:nth-child(3),
-.office a:last-child {
+.office a {
     font-size: 18px;
     line-height: 24px;
     color: #25252c;
@@ -327,6 +334,12 @@ main div {
     font-family: "Arial";
     text-decoration: none;
 }
+
+p .email {
+    font-weight: 100;
+    font-size: 16px;
+    text-decoration: underline;
+} 
 
 .office a:nth-child(2):hover,
 .office a:nth-child(3):hover,
@@ -377,6 +390,7 @@ main div {
 }
 
 .form h2 {
+    margin-bottom: 15px;
     font-size: 14px;
     line-height: 24px;
     color: #24242b;
@@ -392,6 +406,31 @@ main div {
     font-family: "Arial";
 }
 
+.your_information {
+    display: flex;
+}
+
+.your_information label {
+    width: 100%;  
+}
+
+.your_information label:first-child {
+    margin-right: 10px;
+}
+
+.form_in {
+    margin: 5px 0 5px;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #c5c5d4;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
 .checkbox {
     font-size: 13px;
     line-height: 21px;
@@ -399,18 +438,69 @@ main div {
 }
 
 .send input {
+    padding: 10px 34px 8px 34px;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 24px;
-    border: 1px solid #fd8300;
-    border-radius: 21px;
-    color: #ffffff;
+    border: 2px solid #fd8300;
+    color: #fff;
     font-weight: bold;
     text-align: center;
+    border-radius: 21px;
     background-color: #fd8300;
 }
 
-.map {
-    
+.send input:hover {
+    background-color: #fff;
+    color: #25252c;
+}
+
+.checkbox input {
+    border-radius: 3px;
+    border: 1px solid #c5c5d4;
+    margin-left: 30px;
+}
+
+.check {
+    display: none;
+}
+
+.check + label {
+    position: relative;
+    padding-left: 35px;
+}
+
+.check + label::before,
+.check + label::after {
+    content: "";
+    position: absolute;
+}
+
+.check + label::before {
+    left: 0;
+    top: -2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c5c5d4;
+    border-radius: 5px;
+}
+
+.check:checked + label::after {
+    left: 6px;
+    top: 1px;
+    width: 4px;
+    height: 7px;
+    border: 2px solid #1f1f56;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+}
+
+.map iframe {
+    width: 100%;
+    min-height: 300px;
 }
 
 table {
@@ -482,13 +572,12 @@ main {
 }
 
 .content h1 {
-    margin-bottom: 30px;
     color: #24242b;
     font-size: 700 30px "Roboto Slab";
 }
 
-.content p {
-    margin: 5px 0;
+.content > p {
+    margin: 25px 0;
 }
 
 .content a {

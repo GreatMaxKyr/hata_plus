@@ -59,7 +59,7 @@
                     <p class="place">с. Війтівці, Хмельницька обл. 27500</p>
                     <p><a href="tel:+380971002525">+38 (097) 100-25-25</a></p>
                     <p><a href="tel:+380971002525">+38 (097) 100-25-25</a></p>
-                    <p><a href="mailto:hataplus@gmail.com">hataplus@hata.com.ua</a></p>
+                    <p><a class="email" href="mailto:hataplus@gmail.com">hataplus@hata.com.ua</a></p>
                 </div>
                 <div class="advice">
                     <h2>Консультація</h2>
@@ -70,25 +70,30 @@
                 </div>
                 <div class="details">
                     <h2>Реквізити</h2>
-                    <p>ЄДРПОУ 60045123, ІПН 991097555173
-                        Св.№59904423</p>
-                    <p>Р/р 11137539962221,
-                        Банк ХФ ПАТ КБ «ПРИВАТБАНК»</p>
+                    <p>ЄДРПОУ 60045123, ІПН 991097555173<br>Св.№59904423</p>
+                    <p>Р/р 11137539962221,<br>Банк ХФ ПАТ КБ «ПРИВАТБАНК»</p>
                 </div>
             </div>
-            <div class="form_map">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1dBcstvfGharOLdQriTXev5VueWrUUBAp" width="640"height="480"></iframe>
+            <div class="form_map block_wrapper">
+                <div class="map block fifty_p">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1dBcstvfGharOLdQriTXev5VueWrUUBAp"></iframe>
                 </div>
-                <div class="form">
+                <form action="php/sendmail.php" method="POST" class="form block fifty_p">
                     <h2>Форма зворотнього зв’язку</h2>
-                    <input type="text" placeholder="Ваше ім’я" name="" id="">
-                    <input type="text" placeholder="Телефон" name="" id="">
-                    <input type="text" placeholder="Тема повідомлення" name="" id="">
-                    <textarea rows="4" cols="50" placeholder="Текст" name="" id=""></textarea>
-                    <div class="send"><input type="submit"></div>
-                    <div class="checkbox"><input type="checkbox" ><value>Я бажаю отримувати останні новини</value></div>
-                </div>
+                    <div class="your_information">
+                        <label><input type="text" class="form_in" placeholder="Ваше ім’я" name="name" id=""></label>
+                        <label><input type="text" class="form_in" placeholder="Телефон" name="tel" id=""></label>
+                    </div>
+                    <label><input type="text" class="form_in" placeholder="Тема повідомлення" name="theme" id=""></label>
+                    <label><textarea rows="4" cols="50" class="form_in" placeholder="Текст" name="massege" id=""></textarea></label>
+                    <div class="send">
+                        <label><input type="submit" name="send"></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="agree" id="agree" class="check">
+                        <label for="agree">Я бажаю отримувати останні новини</label>
+                    </div>
+                </form>
             </div>
         </main>
     </div>
