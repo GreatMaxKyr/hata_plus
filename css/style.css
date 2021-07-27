@@ -47,6 +47,11 @@ sup {
     font-size: 0;
 }
 
+input,
+textarea {
+    outline: none;
+}
+
 header {
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
@@ -429,6 +434,8 @@ p .email {
 
 .form textarea {
     resize: vertical;
+    min-height: 130px;
+    max-height: 300px;
 }
 
 .checkbox {
