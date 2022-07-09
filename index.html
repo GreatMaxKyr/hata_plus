@@ -13,20 +13,25 @@
     <header>
         <div class="main_menu">
             <div class="wrapper clear">
-                <nav class="top_menu">
-                    <ul>
-                        <li><a href="#">Головна</a></li>
-                        <li><a href="#">Про компанію</a></li>
-                        <li><a href="#">Наші Будівлі</a></li>
-                        <li><a href="index_price.html">Акції</a></li>
-                        <li><a href="index_contacts.html">Контакти</a></li>
+                <div class="hamburger">
+                    <span></span>
+                </div>
+                <nav class="menu">
+                    <nav class="top_menu">
+                        <ul>
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Про компанію</a></li>
+                            <li><a href="#">Наші Будівлі</a></li>
+                            <li><a href="index_price.html">Акції</a></li>
+                            <li><a href="index_contacts.html">Контакти</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="social_menu">
+                        <li><a class="fb" href="#"></a></li>
+                        <li><a class="tw" href="#"></a></li>
+                        <li><a class="inst" href="#"></a></li>
                     </ul>
                 </nav>
-                <ul class="social_menu">
-                    <li><a class="fb" href="#"></a></li>
-                    <li><a class="tw" href="#"></a></li>
-                    <li><a class="inst" href="#"></a></li>
-                </ul>
             </div>
         </div>
         <div class="contacts">
@@ -161,6 +166,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        let hamburger = document.querySelector(".hamburger")
+        let top_menu = document.querySelector(".menu")
+
+        hamburger.onclick = function () {
+            top_menu.classList.toggle("active-burger")
+            hamburger.classList.toggle("hamburger-open")
+        }
+    </script>
 </body>
 
 </html>

@@ -76,10 +76,6 @@ header {
     text-decoration: none;
 }
 
-.social_menu {
-    float: right;
-}
-
 .social_menu a {
     display: block;
     background-image: url(../img/sp_sprite.png);
@@ -115,12 +111,124 @@ a.inst:hover {
     background-position: -32px -20px;
 }
 
+.hamburger{
+    position: absolute;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .hamburger span,
+  .hamburger span:before,
+  .hamburger span:after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    background-color: #fff;  
+    border-radius: 5px;
+    top: 50%;
+    transition: box-shadow .25s ease-in-out;
+  }
+  .hamburger span{
+    transform: translateY(-50%);
+  }
+  .hamburger span:before{
+    top: 15px;
+  }
+  .hamburger span:after{
+    top: -15px;
+  }
+  .hamburger-open span,
+  .hamburger-open span:before,
+  .hamburger-open span:after{
+    background-color: #fff;
+  }
+  .hamburger-open span{
+    animation: fade .1s linear .6s forwards;
+      box-shadow: 0 0 5px 2px rgba(0,255,0,0.7);
+  }
+  .hamburger-open span:before{
+    animation: left .5s ease-in forwards;
+      box-shadow: 0 0 5px 2px rgba(255,0,0,0.7);
+  }
+  .hamburger-open span:after{
+    animation: right .7s ease-in forwards;
+      box-shadow: 0 0 5px 2px rgba(0,0,255,0.7);
+  }
+  
+  @keyframes right{
+    0%{
+      top: -15px;
+      left: 0;
+    }
+    30%{
+      top: -15px;
+      left: 75px;
+    }
+    70%{
+      top: -50px;
+      left: 75px;
+      transform: rotate(-225deg);
+    }
+    100%{
+      top: 0;
+      left: 0;
+      transform: rotate(-225deg);
+    }
+  }
+  @keyframes left{
+    0%{
+      top: 15px;
+      left: 0;
+    }
+    30%{
+      top: 15px;
+      left: -75px;
+    }
+    70%{
+      top: -50px;
+      left: -75px;
+      transform: rotate(225deg);
+    }
+    100%{
+      top: 0;
+      left: 0;
+      transform: rotate(225deg);
+    }
+  }
+  @keyframes fade{
+    from{
+      background-color: #777;
+    }
+    to{
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  
+  .top_menu {
+    display: none;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    margin: 0;
+    padding: 20px 40px;
+    list-style: none;
+    background-color: #25252c;
+  }
+  .top_menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .active-burger {
+    display: block;
+  }
+
 .block_wrapper {
     margin: 0 -14px;
-}
-
-.top_menu {
-    float: left;
 }
 
 .top_menu a {
@@ -129,10 +237,6 @@ a.inst:hover {
 
 .top_menu a:hover {
     color: #fd8300;
-}
-
-.social_menu {
-    float: right;
 }
 
 .social_menu a {
@@ -289,7 +393,6 @@ main div {
     display: inline-block;
 }
 .contacts_main {
-    float: none;
     max-width: 100%;
 }
 
@@ -310,8 +413,6 @@ main div {
 .fifty_p {
     width: 50%;
 }
-
-.contacts_block div {}
 
 .contacts_block > div {
     margin-bottom: 35px;
@@ -388,10 +489,6 @@ p .email {
 
 .form_map {
     display: flex;
-}
-
-.form {
-
 }
 
 .form h2 {
@@ -565,7 +662,6 @@ section a {
 }
 
 main {
-    float: left;
     max-width: 713px;
     
 }
@@ -598,27 +694,32 @@ main {
     color: #24242b;
 }
 
-.cards {
-    padding-top: 30px;
-}
-
 section p {
     color: #666;
     font-size: 14px;
     line-height: 24px;
 }
 
+.cards {
+    padding-top: 30px;
+}
+
 .cards h2 {
-    margin-bottom: 25px;
     color: #24242b;
     font: 700 24px "Roboto Slab";
 }
 
-.figure h3 a {
-    color: #1f1f53;
+.figure {
     text-decoration: none;
     font-size: 14px;
     line-height: 24px;
+    width: 100%;
+}
+
+.figure h3 a {
+    color: #25252c;
+    text-decoration: none;
+    font: 16px "Roboto Slab";
 }
 
 .figure h3 a:hover {
@@ -637,10 +738,6 @@ section p {
     font: 16px "Roboto Slab";
     border-radius: 3px;
     background-color: #1f1f56;
-}
-
-aside {
-    float: right;
 }
 
 .aside ul {
@@ -752,4 +849,31 @@ aside {
     font-size: 13px;
     line-height: 18px;
     text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .social_menu {
+        float: right;
+    }
+
+    .top_menu {
+        float: left;
+    } 
+}
+
+@media screen and (min-width: 712px) {
+    .figure {
+        margin: 10px 14px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 935px) {
+    main {
+        float: left;
+    } 
+    
+    aside {
+        float: right;
+    }
 }
