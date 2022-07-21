@@ -12,31 +12,29 @@
 <body>
     <header>
         <div class="main_menu">
-            <div class="wrapper clear">
+            <div class="wrapper hamburgerrealetive">
                 <div class="hamburger">
                     <span></span>
                 </div>
-                <nav class="menu">
-                    <nav class="top_menu">
-                        <ul>
-                            <li><a href="#">Головна</a></li>
-                            <li><a href="#">Про компанію</a></li>
-                            <li><a href="#">Наші Будівлі</a></li>
-                            <li><a href="index_price.html">Акції</a></li>
-                            <li><a href="index_contacts.html">Контакти</a></li>
-                        </ul>
-                    </nav>
-                    <ul class="social_menu">
-                        <li><a class="fb" href="#"></a></li>
-                        <li><a class="tw" href="#"></a></li>
-                        <li><a class="inst" href="#"></a></li>
+                <nav class="top_menu">
+                    <ul>
+                        <li><a href="#">Головна</a></li>
+                        <li><a href="#">Про компанію</a></li>
+                        <li><a href="#">Наші Будівлі</a></li>
+                        <li><a href="index_price.html">Акції</a></li>
+                        <li><a href="index_contacts.html">Контакти</a></li>
                     </ul>
                 </nav>
+                <ul class="social_menu">
+                    <li><a class="fb" href="#"></a></li>
+                    <li><a class="tw" href="#"></a></li>
+                    <li><a class="inst" href="#"></a></li>
+                </ul>
             </div>
         </div>
         <div class="contacts">
             <div class="wrapper">
-                <div class="block_wrapper">
+                <div class="block_wrapper cont-flex">
                     <div class="block logo">
                         <a href="/"><img alt="Логотип нашої будівельної компанії" src="img/logo.png"></a>
                     </div>
@@ -62,7 +60,7 @@
             <p class="on_photo_price"><span>5999</span> грн / м<sup>2</sup></p>
         </div>
     </div>
-    <div class="main_bloc wrapper clear">
+    <div class="main_bloc wrapper">
         <main>
             <section class="content">
                 <h1>Компанія “Хата Плюс”</h1>
@@ -137,7 +135,7 @@
     <footer>
         <div class="footer_menu">
             <div class="wrapper">
-                <div class="block_wrapper">
+                <div class="block_wrapper cont-flex">
                     <ul class="bottom_menu block">
                         <li><a href="#">Будинки</a></li>
                         <li><a href="#">Інфраструктура</a></li>
@@ -168,8 +166,7 @@
     </footer>
     <script>
         let hamburger = document.querySelector(".hamburger")
-        let top_menu = document.querySelector(".menu")
-
+        let top_menu = document.querySelector(".top_menu")
         hamburger.onclick = function () {
             top_menu.classList.toggle("active-burger")
             hamburger.classList.toggle("hamburger-open")

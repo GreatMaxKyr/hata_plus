@@ -23,23 +23,23 @@ sup {
     font-size: 0.6em;
 }
 
-.clear:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 90%;
+    padding: 15px;
 }
 
 .block {
-    display: inline-block;
-    margin: 0 14px;
+    margin: 0 auto;
+    margin-top: 20px;
     width: 219px;
     vertical-align: middle;
     box-sizing: border-box;
+}
+
+.footer_menu .block,
+.contacts .block {
+    text-align: center;
 }
 
 .block_wrapper {
@@ -53,11 +53,22 @@ textarea {
 }
 
 header {
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.aside {
+    padding: 15px;
+}
+
+.aside .block {
+    width: 100%;
+    margin: 0;
 }
 
 .main_menu {
     padding: 23px 0 19px;
+    display: flex;
+    justify-content: space-between;
     background-color: #1f1f56;
 }
 
@@ -75,6 +86,8 @@ header {
     font-size: 14px;
     text-decoration: none;
 }
+
+.social_menu {}
 
 .social_menu a {
     display: block;
@@ -111,133 +124,153 @@ a.inst:hover {
     background-position: -32px -20px;
 }
 
-.hamburger{
-    position: absolute;
+.hamburgerrealetive {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    height: 20px
+}
+
+.hamburger {
+    position: relative;
     padding: 10px;
     width: 50px;
-    height: 50px;
+    height: 20px;
     cursor: pointer;
-  }
-  .hamburger span,
-  .hamburger span:before,
-  .hamburger span:after{
+}
+
+.hamburger span,
+.hamburger span:before,
+.hamburger span:after {
     content: "";
     position: absolute;
-    width: 50px;
+    width: 40px;
     height: 7px;
-    background-color: #fff;  
-    border-radius: 5px;
-    top: 50%;
-    transition: box-shadow .25s ease-in-out;
-  }
-  .hamburger span{
-    transform: translateY(-50%);
-  }
-  .hamburger span:before{
-    top: 15px;
-  }
-  .hamburger span:after{
-    top: -15px;
-  }
-  .hamburger-open span,
-  .hamburger-open span:before,
-  .hamburger-open span:after{
     background-color: #fff;
-  }
-  .hamburger-open span{
+    border-radius: 5px;
+    top: 15%;
+    transition: box-shadow .25s ease-in-out;
+}
+
+.hamburger span {
+    transform: translateY(-50%);
+}
+
+.hamburger span:before {
+    top: 15px;
+}
+
+.hamburger span:after {
+    top: -15px;
+}
+
+.hamburger-open span,
+.hamburger-open span:before,
+.hamburger-open span:after {
+    background-color: #fff;
+}
+
+.hamburger-open span {
     animation: fade .1s linear .6s forwards;
-      box-shadow: 0 0 5px 2px rgba(0,255,0,0.7);
-  }
-  .hamburger-open span:before{
+    box-shadow: 0 0 5px 2px rgba(0, 255, 0, 0.7);
+}
+
+.hamburger-open span:before {
     animation: left .5s ease-in forwards;
-      box-shadow: 0 0 5px 2px rgba(255,0,0,0.7);
-  }
-  .hamburger-open span:after{
+    box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7);
+}
+
+.hamburger-open span:after {
     animation: right .7s ease-in forwards;
-      box-shadow: 0 0 5px 2px rgba(0,0,255,0.7);
-  }
-  
-  @keyframes right{
-    0%{
-      top: -15px;
-      left: 0;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.7);
+}
+
+@keyframes right {
+    0% {
+        top: -15px;
+        left: 0;
     }
-    30%{
-      top: -15px;
-      left: 75px;
+
+    30% {
+        top: -15px;
+        left: 75px;
     }
-    70%{
-      top: -50px;
-      left: 75px;
-      transform: rotate(-225deg);
+
+    70% {
+        top: -50px;
+        left: 75px;
+        transform: rotate(-225deg);
     }
-    100%{
-      top: 0;
-      left: 0;
-      transform: rotate(-225deg);
+
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(-225deg);
     }
-  }
-  @keyframes left{
-    0%{
-      top: 15px;
-      left: 0;
+}
+
+@keyframes left {
+    0% {
+        top: 15px;
+        left: 0;
     }
-    30%{
-      top: 15px;
-      left: -75px;
+
+    30% {
+        top: 15px;
+        left: -75px;
     }
-    70%{
-      top: -50px;
-      left: -75px;
-      transform: rotate(225deg);
+
+    70% {
+        top: -50px;
+        left: -75px;
+        transform: rotate(225deg);
     }
-    100%{
-      top: 0;
-      left: 0;
-      transform: rotate(225deg);
+
+    100% {
+        top: 0;
+        left: 0;
+        transform: rotate(225deg);
     }
-  }
-  @keyframes fade{
-    from{
-      background-color: #777;
+}
+
+@keyframes fade {
+    from {
+        background-color: #777;
     }
-    to{
-      background-color: transparent;
-      box-shadow: none;
+
+    to {
+        background-color: transparent;
+        box-shadow: none;
     }
-  }
-  
-  .top_menu {
+}
+
+.top_menu {
     display: none;
     position: absolute;
     left: 80px;
-    top: 80px;
+    top: 0;
     margin: 0;
     padding: 20px 40px;
     list-style: none;
-    background-color: #25252c;
-  }
-  .top_menu a {
+    background-color: #1f1f56;
+}
+
+.top_menu a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
-  }
-  .active-burger {
-    display: block;
-  }
-
-.block_wrapper {
-    margin: 0 -14px;
-}
-
-.top_menu a {
     margin-right: 23px;
 }
 
 .top_menu a:hover {
     color: #fd8300;
 }
+
+.active-burger {
+    display: block;
+}
+
 
 .social_menu a {
     display: inline-block;
@@ -246,6 +279,12 @@ a.inst:hover {
 
 .contacts {
     padding: 30px 0;
+}
+
+.cont-flex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .telephones p:first-child,
@@ -297,20 +336,6 @@ a.inst:hover {
     height: 19px;
     width: 18px;
     background-position: -53px 0;
-}
-
-.stick {
-    position: relative; 
-}
-
-.stick::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 3px;
-    width: 1px;
-    height: 51px;
-    background-color: #e4e4ec;
 }
 
 .social_netvork,
@@ -378,7 +403,7 @@ a.inst:hover {
 
 .on_photo_price {
     color: #fd8300;
-    font: bold  24px "Arial";
+    font: bold 24px "Arial";
 }
 
 .on_photo_price span {
@@ -392,12 +417,13 @@ a.inst:hover {
 main div {
     display: inline-block;
 }
+
 .contacts_main {
     max-width: 100%;
 }
 
 .contacts_main h1 {
-    margin: 0 0 30px 0 ;
+    margin: 0 0 30px 0;
     font-size: 24px;
     color: #24242b;
     font-family: "Roboto Slab";
@@ -414,7 +440,7 @@ main div {
     width: 50%;
 }
 
-.contacts_block > div {
+.contacts_block>div {
     margin-bottom: 35px;
 }
 
@@ -422,7 +448,7 @@ main div {
     margin: 30px 0 15px 0;
     font-size: 24px;
     color: #24242b;
-    font-family: serif ,"Roboto Slab";
+    font-family: serif, "Roboto Slab";
 }
 
 .contacts_block h2 {
@@ -445,17 +471,17 @@ p .email {
     font-weight: 100;
     font-size: 16px;
     text-decoration: underline;
-} 
+}
 
 .office a:nth-child(2):hover,
 .office a:nth-child(3):hover,
-.office a:last-child:hover, 
+.office a:last-child:hover,
 .advice a:nth-child(2):hover,
 .advice a:last-child:hover {
     text-decoration: underline;
 }
 
-.place{
+.place {
     font-size: 14px;
     line-height: 21px;
     color: #666;
@@ -469,7 +495,7 @@ p .email {
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .menenger,
@@ -477,7 +503,7 @@ p .email {
     font-size: 14px;
     line-height: 21px;
     color: #666;
-    font-family: "Arial";    
+    font-family: "Arial";
 }
 
 .details p {
@@ -496,7 +522,7 @@ p .email {
     font-size: 14px;
     line-height: 24px;
     color: #24242b;
-    font-family: "Roboto Slab";    
+    font-family: "Roboto Slab";
 }
 
 .form input::-webkit-input-placeholder,
@@ -513,7 +539,7 @@ p .email {
 }
 
 .your_information label {
-    width: 100%;  
+    width: 100%;
 }
 
 .your_information label:first-child {
@@ -571,18 +597,18 @@ p .email {
     display: none;
 }
 
-.check + label {
+.check+label {
     position: relative;
     padding-left: 35px;
 }
 
-.check + label::before,
-.check + label::after {
+.check+label::before,
+.check+label::after {
     content: "";
     position: absolute;
 }
 
-.check + label::before {
+.check+label::before {
     left: 0;
     top: -2px;
     width: 16px;
@@ -591,7 +617,7 @@ p .email {
     border-radius: 5px;
 }
 
-.check:checked + label::after {
+.check:checked+label::after {
     left: 6px;
     top: 1px;
     width: 4px;
@@ -662,8 +688,9 @@ section a {
 }
 
 main {
-    max-width: 713px;
-    
+    width: 100%;
+    padding-left: 30px;
+    display: inline-block;
 }
 
 .block_width {
@@ -673,6 +700,7 @@ main {
 .content {
     padding-bottom: 32px;
     border-bottom: 1px solid #e4e4ec;
+    display: inline-block;
 }
 
 .content h1 {
@@ -680,7 +708,7 @@ main {
     font-size: 700 30px "Roboto Slab";
 }
 
-.content > p {
+.content>p {
     margin: 25px 0;
 }
 
@@ -702,6 +730,7 @@ section p {
 
 .cards {
     padding-top: 30px;
+    padding: 15px;
 }
 
 .cards h2 {
@@ -709,11 +738,12 @@ section p {
     font: 700 24px "Roboto Slab";
 }
 
-.figure {
+.cards .figure {
     text-decoration: none;
     font-size: 14px;
     line-height: 24px;
-    width: 100%;
+    margin: 25px 14px;
+    width: 200px;
 }
 
 .figure h3 a {
@@ -779,7 +809,7 @@ section p {
 .aside_menu a {
     position: relative;
     display: block;
-    padding: 15px;
+    padding: 15px 30px 15px 15px;
     color: #25252c;
     font-size: 14px;
     line-height: 24px;
@@ -851,29 +881,52 @@ section p {
     text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-    .social_menu {
-        float: right;
-    }
-
-    .top_menu {
-        float: left;
-    } 
-}
-
-@media screen and (min-width: 712px) {
-    .figure {
-        margin: 10px 14px;
-        width: 200px;
-    }
-}
-
-@media screen and (min-width: 935px) {
+@media screen and (min-width: 950px) {
     main {
-        float: left;
-    } 
-    
+    }
+
     aside {
-        float: right;
+    }
+
+    .cards .block {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1067px) {
+
+    .footer_menu .block,
+    .contacts .block {
+        display: inline-block;
+    }
+
+    .block {
+        display: inline-block;
+        margin: 0 14px;
+    }
+
+    .stick {
+        position: relative;
+    }
+
+    .stick::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 3px;
+        width: 1px;
+        height: 51px;
+        background-color: #e4e4ec;
+    }
+
+    main {
+        width: 70%;
+    }
+}
+
+
+@media screen and (min-width: 1103px) {
+    aside {
+        width: 220px;
     }
 }
