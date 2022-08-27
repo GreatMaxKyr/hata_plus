@@ -12,7 +12,10 @@
 <body>
     <header>
         <div class="main_menu">
-            <div class="wrapper clear">
+            <div class="wrapper hamburgerrealetive">
+                <div class="hamburger">
+                    <span></span>
+                </div>
                 <nav class="top_menu">
                     <ul>
                         <li><a href="index.html">Головна</a></li>
@@ -31,7 +34,7 @@
         </div>
         <div class="contacts">
             <div class="wrapper">
-                <div class="block_wrapper">
+                <div class="block_wrapper cont-flex">
                     <div class="block logo">
                         <a href="/"><img alt="Логотип нашої будівельної компанії" src="img/logo.png"></a>
                     </div>
@@ -76,6 +79,7 @@
             </div>
             <div class="form_map block_wrapper">
                 <div class="map block fifty_p">
+                    
                     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dBcstvfGharOLdQriTXev5VueWrUUBAp&ehbc=2E312F" width="640" height="480"></iframe>
                 </div>
                 <form action="php/sendmail.php" method="POST" class="form block fifty_p">
@@ -86,12 +90,14 @@
                     </div>
                     <label><input type="text" class="form_in" placeholder="Тема повідомлення" name="theme" id=""></label>
                     <label><textarea rows="4" cols="50" class="form_in" placeholder="Текст" name="massege" id=""></textarea></label>
-                    <div class="send">
-                        <label><input type="submit" name="send"></label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="agree" id="agree" class="check">
-                        <label for="agree">Я бажаю отримувати останні новини</label>
+                    <div class="check-gap">
+                        <div class="send">
+                            <label><input type="submit" name="send"></label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="agree" id="agree" class="check">
+                            <label for="agree">Я бажаю отримувати останні новини</label>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -100,7 +106,7 @@
     <footer>
         <div class="footer_menu">
             <div class="wrapper">
-                <div class="block_wrapper">
+                <div class="block_wrapper cont-flex">
                     <ul class="bottom_menu block">
                         <li><a href="#">Будинки</a></li>
                         <li><a href="#">Інфраструктура</a></li>
@@ -130,7 +136,12 @@
         </div>
     </footer>
     <script>
-        
+        let hamburger = document.querySelector(".hamburger")
+        let top_menu = document.querySelector(".top_menu")
+        hamburger.onclick = function () {
+            top_menu.classList.toggle("active-burger")
+            hamburger.classList.toggle("hamburger-open")
+        }
     </script>
 </body>
 
