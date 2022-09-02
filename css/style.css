@@ -269,7 +269,7 @@ a.inst:hover {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #fff;
+    color: #b1b1d2;
     margin-right: 23px;
 }
 
@@ -701,6 +701,12 @@ table th:last-child,
 table td:last-child {
     text-align: right;
 }
+
+table tr:hover td{
+    background-color: #fd8300;
+    border: none;
+    color: #fff;
+} 
 
 table td {
     color: #666;
