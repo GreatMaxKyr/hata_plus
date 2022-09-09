@@ -16,7 +16,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    cursor: url(../cursor.cur), auto;
+    cursor: url(../house.cur), auto;
 }
 
 sup {
@@ -116,14 +116,20 @@ a.inst {
 
 a.fb:hover {
     background-position: 0 -20px;
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
 }
 
 a.tw:hover {
     background-position: -12px -20px;
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
 }
 
 a.inst:hover {
     background-position: -32px -20px;
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
 }
 
 .hamburgerrealetive {
@@ -275,6 +281,8 @@ a.inst:hover {
 
 .top_menu a:hover {
     color: #fd8300;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 .active-burger {
@@ -380,6 +388,8 @@ a.inst:hover {
 .order_a_call a:hover {
     color: #fff;
     background-color: #fd8300;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 
 .on_photo {
@@ -432,6 +442,7 @@ main div {
 
 .contacts_main h1 {
     margin: 0 0 30px 0;
+    text-align: center;
     color: #24242b;
     font: 700 2rem "Roboto Slab";
 }
@@ -628,6 +639,8 @@ form.fifty_p {
 .send input:hover {
     background-color: #fff;
     color: #25252c;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
 }
 
 .checkbox input {
@@ -641,6 +654,7 @@ form.fifty_p {
 }
 
 .check+label {
+    display: block;
     position: relative;
     padding-left: 35px;
 }
@@ -805,6 +819,11 @@ section p {
     font-size: 1.2rem;
     line-height: 24px;
     margin: 0 auto;
+}
+
+.figure:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease;
 }
 
 .figure h3 a {
@@ -1004,13 +1023,21 @@ section p {
     }
 }
 
-@media screen and (min-width: 979px) {
-    .contacts_block>div:nth-child(3) {
-        margin: 0;
+@media screen and (min-width: 978px) {
+    .details {
+        padding-right: 70px;
+    }
+
+    .contacts_block {
+        justify-content: space-around;
     }
 }
 
 @media screen and (min-width: 1067px) {
+    .contacts_block>div:nth-child(3) {
+        margin: 0;
+    }
+
     .block {
         display: inline-block;
     }
@@ -1027,6 +1054,10 @@ section p {
         width: 1px;
         height: 51px;
         background-color: #e4e4ec;
+    }
+
+    .contacts_main h1 {
+        text-align: left;
     }
 
     .footer_menu .block,
